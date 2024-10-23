@@ -11,7 +11,7 @@ pipeline {
         stage('Clone') {
             steps {
                 timeout(time: 2, unit: 'MINUTES'){
-                    git branch: 'main', credentialsId: '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', url: 'https://github.com/guver71/PruebaDespliegue-03.git'
+                    git branch: 'main', credentialsId: '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', url: 'https://github.com/guver71/PruebaDespliegue-03.git'
                 }
             }
         }
