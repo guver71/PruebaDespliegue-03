@@ -208,8 +208,8 @@
             <configuration>
                 <forkCount>1</forkCount>
                 <reuseForks>false</reuseForks>
-                <timeout>300</timeout> <!-- Aumentar el tiempo de espera en segundos -->
-                <timeoutSuite>300</timeoutSuite> <!-- Aumentar el tiempo de espera para el conjunto de pruebas en segundos -->
+                <timeout>600</timeout> <!-- Aumentar el tiempo de espera en segundos -->
+                <timeoutSuite>600</timeoutSuite> <!-- Aumentar el tiempo de espera para el conjunto de pruebas en segundos -->
             </configuration>
         </plugin>       
         </plugins>

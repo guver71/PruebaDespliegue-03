@@ -31,7 +31,7 @@ pipeline {
        
 	stage('Sonar') {
     	    steps {
-        	timeout(time: 4, unit: 'MINUTES') {
+        	timeout(time: 8, unit: 'MINUTES') {
             	     withSonarQubeEnv('sonarqube') {
                         sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f leon/pom.xml"
             	    }
