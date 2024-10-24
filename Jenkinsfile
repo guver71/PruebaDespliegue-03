@@ -16,14 +16,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                timeout(time: 8, unit: 'MINUTES'){
+                timeout(time: 12, unit: 'MINUTES'){
                     sh "mvn -DskipTests clean package -f leon/pom.xml"
                 }
             }
         }
         stage('Test') {
             steps {
-                timeout(time: 8, unit: 'MINUTES'){
+                timeout(time: 12, unit: 'MINUTES'){
                     sh "mvn clean install -f leon/pom.xml"
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
        
 	stage('Sonar') {
     	    steps {
-        	timeout(time: 10, unit: 'MINUTES') {
+        	timeout(time: 12, unit: 'MINUTES') {
             	     withSonarQubeEnv('sonarqube') {
                         sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar -Pcoverage -f leon/pom.xml"
             	    }
