@@ -45,7 +45,7 @@ pipeline {
 
                 script {
                     try {
-                        timeout(time: 3, unit: 'MINUTES') {
+                        timeout(time: 5, unit: 'MINUTES') {
                             waitForQualityGate() // Sin abortPipeline para que no falle automáticamente
                         }
                     } catch (e) {
