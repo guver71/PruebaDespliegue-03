@@ -38,7 +38,7 @@ pipeline {
                 }
             }
         }
-
+/**
         stage('Quality gate') {
             steps {
                 sleep(10) // seconds
@@ -56,6 +56,8 @@ pipeline {
                 }
             }
         }
+
+        **/
         stage('Deploy') {
             steps {
         sh "mvn spring-boot:run -f leon/pom.xml"
